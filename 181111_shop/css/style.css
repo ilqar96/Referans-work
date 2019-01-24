@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  background-color: black !important;
+}
+
+table {
+  min-width: 990px;
+}
+#productAddEdit {
+  color: white !important;
+}
+.bg-dark {
+  background-color: rgb(50, 51, 58) !important;
+}
+.addElement {
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 61, 173);
+  border-radius: 50%;
+  bottom: 0;
+  right: -50px;
+  cursor: pointer;
+  transition:0.5s;
+}
+.addElement:hover {
+  color: rgb(26, 27, 29);
+}
+
+#myTable_wrapper {
+  width: 100% !important;
+}
+
+#complatedAction{
+  position: fixed;
+  top:10px;
+  left:50%;
+  transform: translateX(-50%);
+  opacity:0;
+  background-color: rgb(0, 225, 255) !important;
+}

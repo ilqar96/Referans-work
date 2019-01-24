@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+                margin:0px;
+                padding: 0px;
+                height: 100vh;
+                background-color: rgb(73, 73, 73);
+                position: relative;
+                overflow: hidden;
+            }
+            .drop{
+                position: absolute;
+                width: 2px;
+                height: 10px;
+                left:50%;
+                top:10px;
+                background-color: rgba(115, 250, 241, 0.794);
+            }
+            .rainConfig{
+                position:absolute;
+                z-index: 10;
+                right: 0;
+                width: 200px;
+                background-color: #333;
+            }
+            .rainSpeed , .rainCount{
+                margin:auto;
+                text-align: center;
+                color:white;
+                margin-bottom: 30px;
+            }
+             form{
+                text-align: left;
+                margin-left:50px;
+                font-size: 20px;
+            }
+            form input{
+                width: 20px;
+                height: 20px;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="rainConfig">
+        <div class="rainSpeed">
+            <h4>Change Rain Speed</h4>
+            <form id="speed">
+                <input type="radio" name="speed" value="40"> fast<br>
+                <input type="radio" name="speed" value="20"> medium<br>
+                <input type="radio" name="speed" value="10" checked> slow
+            </form>
+        </div>
+        <div class="rainCount">
+            <h4>Change Rain Count</h4>
+            <form id="count">
+                <input type="radio" name="count" value="500"> 500<br>
+                <input type="radio" name="count" value="200"> 200<br>
+                <input type="radio" name="count" value="100" checked> 100
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

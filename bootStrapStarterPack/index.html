@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- google fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <!-- Font awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- LightBox gallery  -->
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+     <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scroll Reveal JS -->
+    <script  src="js/scrollreveal.min.js"></script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- POPPER JS -->
+    <script src="js/popper.js" ></script>
+    <!-- BOOTSTRAP  -->
+    <script  type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- LIGHTBOX JS -->
+    <script type="text/javascript" src="js/lightbox.js"></script>
+    <!-- MAIN JAVASCRIPT  -->
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    
+    <!-- Scrolling script  -->
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+    
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+    
+              // Store hash
+              var hash = this.hash;
+    
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
+    
+
+
+
+
+    
+
+    <!-- Script reveal -->
+    <!-- <script >
+      window.sr = ScrollReveal();
+
+      // Custom Settings
+      sr.reveal('.headReveal', 
+        { duration: 3000 });
+
+      sr.reveal('#featureSection', {
+        duration:3000
+      });
+      sr.reveal('.historyLeft' ,{
+        duration:4000,
+        origin:'left',
+        viewFactor: 0.3
+      });
+       sr.reveal('.historyRight' ,{
+        duration:4000,
+        origin:'right',
+        viewFactor: 0.3
+      });
+        sr.reveal('.team1' ,{
+        duration:2000,
+        delay:500,
+        origin:'left'
+      });
+
+    </script> -->
+
+
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 60%;
+            height: 400px;
+            margin: 100px auto;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            font-size: 40px;
+            color: white;
+        }
+
+        h1 {
+            text-shadow: 8px 4px 15px rgb(252, 16, 16);
+        }
+
+        .mouseCursor {
+            margin-left: 15px;
+            width: 9px;
+            height: 50px;
+            background-color: #fff;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text">
+            <h1>I am <span class="changeText"></span><span class="mouseCursor"></span> </h1>
+        </div>
+    </div>
+
+
+    <script>
+        var words = ["Deweloper", "Traveller", "Designer", "Photographer"];
+        var spanText = document.querySelector(".changeText");
+        var x = 0;
+        var y = 0;
+        var cursorOpacity = false;
+
+
+        // cursor function
+        var cursorInter = setInterval(function () {
+            if (cursorOpacity == true) {
+                cursorOpacity = false;
+                document.querySelector(".mouseCursor").style.opacity = "0";
+            }
+            else if (cursorOpacity == false) {
+                cursorOpacity = true;
+                document.querySelector(".mouseCursor").style.opacity = "1";
+            }
+        }, 300)
+
+
+
+        // letter interval 
+        var myInter = setInterval(addLetteer, 200);
+        // letter function 
+        function addLetteer() {
+            if (x < words.length) {
+                if (y < words[x].length) {
+                    var span = document.createElement("span");
+                    span.innerHTML = words[x][y];
+                    spanText.appendChild(span);
+                    y++;
+                }
+                else if (y == words[x].length) {
+                    if (spanText.lastElementChild != null) {
+                        console.log(spanText.lastElementChild);
+                        spanText.removeChild(spanText.lastElementChild)
+                    }
+                    else {
+                        y = 0;
+                        x++;
+                    }
+                }
+            }
+            else {
+                x = 0;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
