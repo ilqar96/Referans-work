@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>loader</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="preloader"><div class="loader"></div></div>
+
+    <div class="container">
+      <div class="section section1">
+        <div class="content">
+          <h2>Section 1</h2>
+
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/g77WfQ-blxI?controls=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="section section2">
+        <div class="content"><h2>Section 2</h2></div>
+      </div>
+      <div class="section section3">
+        <div class="content"><h2>Section 3</h2></div>
+      </div>
+      <div class="section section4">
+        <div class="content"><h2>Section 4</h2></div>
+      </div>
+    </div>
+
+    <script src="jquery.3.3.1.min.js"></script>
+
+    <script>
+      $(window).on("load", function() {
+        $(".preloader").addClass("complete");
+      });
+    </script>
+  </body>
+</html>
